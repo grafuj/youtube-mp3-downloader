@@ -1,3 +1,7 @@
+# Youtube MP3 Downloader
+
+This is a simple mp3 downloader I build as it was a service I needed and it would be a great thing to build.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
