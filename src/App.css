@@ -2,8 +2,23 @@
 
 body {
   font-family: 'Onest', sans-serif;
+  height: 100vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgb(0, 0, 29) 55%, rgb(1, 0, 53) 100%);
 }
 
 .page_title {
   font-size: 30px;
+  margin-bottom: 1em;
+}
+
+.light_blue {
+  color: aliceblue;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12em;
 }
