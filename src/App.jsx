@@ -18,10 +18,10 @@ function App() {
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
       }
     }
-    axios(options)
-      .then(res => setUrlResult(res.data))
-      .catch(error => console.error("Error:", error))
-  }
+  //   axios(options)
+  //     .then(res => setUrlResult(res.data))
+  //     .catch(error => console.error("Error:", error))
+  // }
 
   // input needs value
   return (
