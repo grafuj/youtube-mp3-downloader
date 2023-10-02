@@ -1,27 +1,34 @@
 import { useRef, useState } from 'react';
 import './App.css';
+import youtube_parser from './helpers';
 
 function App() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(inputUrlRef.input.value)
+    e.preventDefault();
+    console.log(inputUrlRef.current.value);
+
+    const youtubeID = youtube_parser(inputUrlRef.current.value);
+    console.log("youtubeID:", youtubeID);
 
     const options = {
       method: 'get',
       url: 'https://youtube-mp36.p.rapidapi.com/dl',
-      params: {id: 'UxxajLWwzqY'},
+      params: { id: youtubeID },
       headers: {
         'X-RapidAPI-Key': 'ffbf0b6fdamsh95902cd4574e50fp1ae931jsn794044a62ced',
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
       }
-    }
-  //   axios(options)
-  //     .then(res => setUrlResult(res.data))
-  //     .catch(error => console.error("Error:", error))
-  // }
+    };
+    axios(options)
+      .then(res => setUrlResult(res.data))
+      .catch(error => console.error("Error:", error));
+
+    inputUrlRef.current.value = ""; //reset for next
+
+  };
 
   // input needs value
   return (
