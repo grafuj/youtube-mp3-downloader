@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useRef, useState } from 'react';
 import './App.css';
 import youtube_parser from './helpers';
@@ -23,10 +24,11 @@ function App() {
       }
     };
     axios(options)
-      .then(res => setUrlResult(res.data))
+      .then(res => {
+        setUrlResult(res.data);
+        inputUrlRef.current.value = ""; //reset for next
+      })
       .catch(error => console.error("Error:", error));
-
-    inputUrlRef.current.value = ""; //reset for next
 
   };
 
