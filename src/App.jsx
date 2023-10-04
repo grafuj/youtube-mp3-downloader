@@ -17,11 +17,11 @@ function App() {
     const options = {
       method: 'get',
       url: 'https://youtube-mp36.p.rapidapi.com/dl',
-      params: { id: youtubeID },
       headers: {
         'X-RapidAPI-Key': 'ffbf0b6fdamsh95902cd4574e50fp1ae931jsn794044a62ced',
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
-      }
+      },
+      params: { id: youtubeID },
     };
     axios(options)
       .then(res => {
