@@ -45,6 +45,9 @@ function App() {
       {urlResult ?
         <a target="_blank" rel="noreferrer" href={urlResult} className="download_link light_blue">Download MP3</a>
         : ""}
+      <div className="footer">
+        Code by <a href="https://github.com/grafuj/local-news-GPT-react">grafuj</a>.
+      </div>
     </div>
   );
 }

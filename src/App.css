@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Onest', sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
   background: rgb(2, 0, 36);
-  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgb(0, 0, 29) 55%, rgb(1, 0, 53) 100%);
+  /* background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgb(0, 0, 29) 55%, rgb(1, 0, 53) 100%); */
 }
 
 .page_title {
@@ -75,4 +75,12 @@ body {
   .content{
     margin-top: 9em;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0px;
+
 }
