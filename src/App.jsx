@@ -25,7 +25,7 @@ function App() {
     };
     axios(options)
       .then(res => {
-        setUrlResult(res.data);
+        setUrlResult(res.data.link);
         inputUrlRef.current.value = ""; //reset for next
       })
       .catch(error => console.error("Error:", error));
@@ -42,7 +42,9 @@ function App() {
         <button type='submit' className='form_button light_blue'>Convert</button>
       </form>
 
-      <a href="" className="download_link light_blue">Download MP3</a>
+      {urlResult ?
+        <a target="_blank" rel="noreferrer" href={urlResult} className="download_link light_blue">Download MP3</a>
+        : ""}
     </div>
   );
 }
