@@ -37,6 +37,7 @@ function App() {
     <div className='content'>
       <>
         <h1 className='page_title light_blue'>Youtube to MP3 Converter</h1>
+        <hr className="hr_separator" />
         <p className="content_description light_blue">Pull an MP3 off a youtube video</p>
         <form className='form' onSubmit={handleSubmit}>
           <input ref={inputUrlRef} className='form_input light_blue' type='text' placeholder='Paste a Youtube URL...'></input>
@@ -48,6 +49,7 @@ function App() {
           : ""}
       </>
       <div className="footer">
+        <hr className="hr_separator" />
         <span className="light_blue">
           Code by <a href="https://github.com/grafuj/youtube-mp3-downloader">grafuj</a>.
         </span>
