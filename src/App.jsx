@@ -35,16 +35,18 @@ function App() {
   // input needs value
   return (
     <div className='content'>
-      <h1 className='page_title light_blue'>Youtube to MP3 Converter</h1>
-      <p className="content_description light_blue">Pull an MP3 off a youtube video</p>
-      <form className='form' onSubmit={handleSubmit}>
-        <input ref={inputUrlRef} className='form_input light_blue' type='text' placeholder='Paste a Youtube URL...'></input>
-        <button type='submit' className='form_button light_blue'>Convert</button>
-      </form>
+      <>
+        <h1 className='page_title light_blue'>Youtube to MP3 Converter</h1>
+        <p className="content_description light_blue">Pull an MP3 off a youtube video</p>
+        <form className='form' onSubmit={handleSubmit}>
+          <input ref={inputUrlRef} className='form_input light_blue' type='text' placeholder='Paste a Youtube URL...'></input>
+          <button type='submit' className='form_button light_blue'>Convert</button>
+        </form>
 
-      {urlResult ?
-        <a target="_blank" rel="noreferrer" href={urlResult} className="download_link light_blue">Download MP3</a>
-        : ""}
+        {urlResult ?
+          <a target="_blank" rel="noreferrer" href={urlResult} className="download_link light_blue">Download MP3</a>
+          : ""}
+      </>
       <div className="footer">
         <span className="light_blue">
           Code by <a href="https://github.com/grafuj/youtube-mp3-downloader">grafuj</a>.

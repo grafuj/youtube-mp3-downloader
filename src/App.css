@@ -2,9 +2,8 @@
 
 body {
   font-family: 'Onest', sans-serif;
-  /* height: 100vh; */
   background: rgb(2, 0, 36);
-  /* background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgb(0, 0, 29) 55%, rgb(1, 0, 53) 100%); */
+  background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgb(0, 0, 29) 55%, rgb(1, 0, 53) 100%);
 }
 
 .page_title {
@@ -23,6 +22,8 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 12em;
+  /* justify-content: space-between; */
+  min-height: 100vh;
 }
 
 .content_description {
@@ -81,6 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 0px;
-
+  position: absolute;
+  bottom: 0;
+  /* width: 100%; */
 }
