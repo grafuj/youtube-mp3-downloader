@@ -23,7 +23,6 @@ body {
   align-items: center;
   min-height: 90vh;
   margin-top: 10vh;
-  /* justify-content: space-between; */
 }
 
 .content_description {
@@ -93,5 +92,6 @@ body {
   position: absolute;
   width: 100%;
   bottom: 3vh;
+  padding-top: 5px;
   /* width: 100%; */
 }
