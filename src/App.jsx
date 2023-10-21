@@ -29,7 +29,6 @@ function App() {
         inputUrlRef.current.value = ""; //reset for next
       })
       .catch(error => console.error("Error:", error));
-
   };
 
   // input needs value
