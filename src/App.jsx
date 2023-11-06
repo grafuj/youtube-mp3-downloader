@@ -18,11 +18,12 @@ function App() {
       method: 'get',
       url: 'https://youtube-mp36.p.rapidapi.com/dl',
       headers: {
-        'X-RapidAPI-Key': import.meta.env.RAPID_API_KEY,
+        'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
         'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
       },
       params: { id: youtubeID },
     };
+    console.log("Request options:", options);
     axios(options)
       .then(res => {
         setUrlResult(res.data.link);
