@@ -2,6 +2,10 @@
 
 This is a simple mp3 downloader I build as it was a service I needed and it would be a great thing to build.
 
+## Screenshot
+
+![main page to enter link and download MP3](https://raw.githubusercontent.com/grafuj/youtube-mp3-downloader/master/docs/UI.PNG)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
