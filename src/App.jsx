@@ -23,7 +23,7 @@ function App() {
       },
       params: { id: youtubeID },
     };
-    console.log("Request options:", options);
+    // console.log("Request options:", options); // console log to investigate if the api key is sent
     axios(options)
       .then(res => {
         setUrlResult(res.data.link);
