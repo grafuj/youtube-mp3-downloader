@@ -9,10 +9,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputUrlRef.current.value);
+    // console.log(inputUrlRef.current.value);
 
     const youtubeID = youtube_parser(inputUrlRef.current.value);
-    console.log("youtubeID:", youtubeID);
+    // console.log("youtubeID:", youtubeID);
 
     const options = {
       method: 'get',
