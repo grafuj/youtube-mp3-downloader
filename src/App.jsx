@@ -9,10 +9,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(inputUrlRef.current.value);
+    // console.log(inputUrlRef.current.value); // log to monitor what the input is
 
     const youtubeID = youtube_parser(inputUrlRef.current.value);
-    // console.log("youtubeID:", youtubeID);
+    // console.log("youtubeID:", youtubeID); // log to monitor parser output of user's link
 
     const options = {
       method: 'get',
@@ -23,7 +23,7 @@ function App() {
       },
       params: { id: youtubeID },
     };
-    // console.log("Request options:", options); // console log to investigate if the api key is sent
+    // console.log("Request options:", options); // console log to investigate options object and if the api key is appropriate
     axios(options)
       .then(res => {
         setUrlResult(res.data.link);
