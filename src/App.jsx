@@ -6,6 +6,7 @@ import youtube_parser from './helpers';
 function App() {
   const inputUrlRef = useRef();
   const [urlResult, setUrlResult] = useState(null);
+  // const [mp3Title, setMP3Title] = useState(null); // state to hold mp3 title for display, line 31
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +27,8 @@ function App() {
     // console.log("Request options:", options); // console log to investigate options object and if the api key is appropriate
     axios(options)
       .then(res => {
+        // console.log("res:", res); // response object to pull mp3's title
+        // setMP3Title(res.data.title);  // setting an mp3 title for display, add {mp3Title} to line 51
         setUrlResult(res.data.link);
         inputUrlRef.current.value = ""; //reset for next
       })
